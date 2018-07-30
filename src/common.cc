@@ -130,6 +130,7 @@ namespace sharp {
       case ImageType::PPM: id = "ppm"; break;
       case ImageType::FITS: id = "fits"; break;
       case ImageType::VIPS: id = "v"; break;
+      case ImageType::PSD: id = "psd"; break;
       case ImageType::RAW: id = "raw"; break;
       case ImageType::UNKNOWN: id = "unknown"; break;
     }
@@ -160,6 +161,8 @@ namespace sharp {
         imageType = ImageType::PDF;
       } else if (EndsWith(loader, "MagickBuffer")) {
         imageType = ImageType::MAGICK;
+      } else if (EndsWith(loader, "PsdBuffer")) {
+        imageType = ImageType::PSD;
       }
     }
     return imageType;

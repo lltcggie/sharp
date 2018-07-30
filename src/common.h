@@ -108,6 +108,7 @@ namespace sharp {
     PPM,
     FITS,
     VIPS,
+    PSD,
     RAW,
     UNKNOWN
   };
